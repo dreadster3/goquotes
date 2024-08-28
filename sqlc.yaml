@@ -1,0 +1,8 @@
+version: "2"
+sql:
+  - engine: "sqlite"
+    queries: "database/queries"
+    schema: "database/migrations"
+    gen:
+      go:
+        out: "database/generated"

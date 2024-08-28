@@ -1,0 +1,14 @@
+{
+  "name": "goquotes",
+  "version": "0.0.1",
+  "description": "A new buddy project",
+  "author": "dreadster3",
+  "scripts": {
+    "start": "go run .",
+    "build": "go build -o dist/ . && cp -r database dist/database",
+    "delete:db": "rm ./quotes.db",
+    "migrate:up": "migrate --path ./database/migrations --database sqlite3://quotes.db up",
+    "migrate:down": "migrate --path ./database/migrations --database sqlite3://quotes.db down -all",
+    "migrate:fresh": "buddy delete:db && buddy migrate:up"
+  }
+}

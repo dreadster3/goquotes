@@ -1,0 +1,4 @@
+CREATE TABLE tb_quotes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  quote varchar(255) NOT NULL
+);
